@@ -13,6 +13,7 @@ body {
   background-size: 100% 100%;
   height: 100vh;
   background-position: cover;
+  overflow: hidden;
 }
 /* https://wallpaperaccess.com/full/128744.jpg */
 /* https://wallpaperaccess.com/full/5552611.jpg */

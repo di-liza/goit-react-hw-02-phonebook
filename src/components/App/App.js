@@ -9,7 +9,7 @@ import { Notification } from '../Notification/Notification';
 import {
   Container,
   ContactsWrapper,
-  FormTitle,
+  Title,
   FormWrapper,
 } from './App.styled.jsx';
 
@@ -52,12 +52,12 @@ export class App extends Component {
     return (
       <Container>
         <FormWrapper>
-          <FormTitle>PhoneBook</FormTitle>
+          <Title>PhoneBook</Title>
           <ContactForm addContact={this.addContact} contacts={contacts} />
         </FormWrapper>
 
         <ContactsWrapper>
-          <h2>Contacts</h2>
+          <Title>Contacts</Title>
           <div>
             <Filter name={filter} onChangeInput={this.handleFilterChange} />
             {value.length !== 0 ? (

@@ -56,7 +56,7 @@ export const FormWrapper = styled.div`
   outline: none;
   border: none;
 `;
-export const FormTitle = styled.h1`
+export const Title = styled.h1`
   font-size: 32px;
   font-weight: 500;
   line-height: 42px;
