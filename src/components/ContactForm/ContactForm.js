@@ -1,14 +1,7 @@
 import { Component } from 'react';
 import PropTypes, { shape } from 'prop-types';
 
-import {
-  Inputbox,
-  FormTitle,
-  Input,
-  Form,
-  Label,
-  AddBtn,
-} from './ContactForm.styled';
+import { Inputbox, Input, Form, Label, AddBtn } from './ContactForm.styled';
 
 export class ContactForm extends Component {
   state = {
@@ -42,7 +35,6 @@ export class ContactForm extends Component {
     return (
       <>
         <Form onSubmit={this.handleContactFormSubmit}>
-          <FormTitle>PhoneBook</FormTitle>
           <Inputbox>
             <div>
               <Label htmlFor="name">Name</Label>
