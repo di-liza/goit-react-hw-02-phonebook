@@ -8,29 +8,27 @@ export class ContactForm extends Component {
     name: '',
     number: '',
   };
+
   handleInputName = e => {
     this.setState({ name: e.currentTarget.value });
   };
+
   handleInputTel = e => {
     this.setState({ number: e.currentTarget.value });
   };
 
   handleContactFormSubmit = e => {
     e.preventDefault();
+
     const { name, number } = this.state;
 
-    const isContactExists = this.props.contacts.some(
-      contact => contact.name === name
-    );
-
-    return isContactExists
-      ? alert(`${name} is already in contacts`)
-      : (this.props.addContact(name, number), this.resetForm());
+    this.props.addContact(name, number, this.resetForm);
   };
 
   resetForm = () => {
     this.setState({ name: '', number: '' });
   };
+
   render() {
     return (
       <>
