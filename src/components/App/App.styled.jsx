@@ -16,10 +16,7 @@ export const ContactsWrapper = styled.div`
   height: 520px;
   width: 400px;
   background-color: rgba(255, 255, 255, 0.13);
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  right: 7%;
+
   border-radius: 10px;
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.1);
@@ -46,10 +43,7 @@ export const FormWrapper = styled.div`
   height: 520px;
   width: 400px;
   background-color: rgba(255, 255, 255, 0.13);
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 31%;
+
   border-radius: 10px;
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.1);
@@ -67,4 +61,12 @@ export const FormTitle = styled.h1`
   font-weight: 500;
   line-height: 42px;
   text-align: center;
+`;
+
+export const Container = styled.div`
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
 `;

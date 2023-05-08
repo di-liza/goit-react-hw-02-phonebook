@@ -6,7 +6,12 @@ import { ContactList } from '../ContactList/ContactList';
 import { Filter } from '../Filter/Filter';
 import { Notification } from '../Notification/Notification';
 
-import { ContactsWrapper, FormTitle, FormWrapper } from './App.styled.jsx';
+import {
+  Container,
+  ContactsWrapper,
+  FormTitle,
+  FormWrapper,
+} from './App.styled.jsx';
 
 export class App extends Component {
   state = {
@@ -45,7 +50,7 @@ export class App extends Component {
     const { contacts, filter } = this.state;
     const value = this.getFilteredContacts();
     return (
-      <>
+      <Container>
         <FormWrapper>
           <FormTitle>PhoneBook</FormTitle>
           <ContactForm addContact={this.addContact} contacts={contacts} />
@@ -65,7 +70,7 @@ export class App extends Component {
             )}
           </div>
         </ContactsWrapper>
-      </>
+      </Container>
     );
   }
 }
