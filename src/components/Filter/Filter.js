@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Input, FilterBox } from './Filter.styled';
 
 export function Filter({ name, onChangeInput }) {
@@ -8,3 +10,8 @@ export function Filter({ name, onChangeInput }) {
     </FilterBox>
   );
 }
+
+Filter.propTypes = {
+  name: PropTypes.string.isRequired,
+  onChangeInput: PropTypes.func.isRequired,
+};

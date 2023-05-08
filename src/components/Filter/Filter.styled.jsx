@@ -25,4 +25,5 @@ export const FilterBox = styled.div`
   color: #ffffff;
   letter-spacing: 0.5px;
   border: none;
+  margin-bottom: 20px;
 `;

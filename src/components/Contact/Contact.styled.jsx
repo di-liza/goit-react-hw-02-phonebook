@@ -1,4 +1,14 @@
 import styled from '@emotion/styled';
+import { keyframes } from '@emotion/react';
+
+const slideIn = keyframes`
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
 
 export const Item = styled.li`
   width: 300px;
@@ -9,14 +19,14 @@ export const Item = styled.li`
   display: flex;
   padding-left: 10px;
   padding-right: 10px;
-  /* gap: 50px; */
   align-items: center;
   justify-content: space-between;
 
   margin-bottom: 10px;
-  :nth-last-child() {
+  :nth-last-of-type() {
     margin-bottom: 0px;
   }
+  animation: ${slideIn} 0.3s ease-in-out forwards;
 `;
 
 export const DeleteBtn = styled.button`
