@@ -1,9 +1,11 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 
-import { ContactForm } from './ContactForm/ContactForm';
-import { ContactList } from './ContactList/ContactList';
-import { Filter } from './Filter/Filter';
+import { ContactForm } from '../components/ContactForm/ContactForm';
+import { ContactList } from '../components/ContactList/ContactList';
+import { Filter } from '../components/Filter/Filter';
+
+import { BoxItem } from './App.styled.jsx';
 
 export class App extends Component {
   state = {
@@ -46,12 +48,16 @@ export class App extends Component {
   render() {
     const { contacts, filter } = this.state;
     const value = this.getFilteredContacts();
-
+    console.log('Box:', BoxItem);
     return (
       <>
         <ContactForm addContact={this.addContact} contacts={contacts} />
-        <Filter name={filter} onChangeInput={this.handleFilterChange} />
-        <ContactList contacts={value} handleDeleteBTN={this.deleteContact} />
+
+        <BoxItem>
+          <h2>Contacts</h2>
+          <Filter name={filter} onChangeInput={this.handleFilterChange} />
+          <ContactList contacts={value} handleDeleteBTN={this.deleteContact} />
+        </BoxItem>
       </>
     );
   }

@@ -1,28 +1,37 @@
-import { Item } from './ContactList.styled';
+import { ListBox } from './ContactList.styled';
+import { Contact } from 'components/Contact/Contact';
 
 export function ContactList({ contacts, handleDeleteBTN }) {
   return (
     <>
-      <h2>Contacts</h2>
-      <ul>
-        {contacts.map(({ name, id, number }) => {
-          return (
-            <Item key={id}>
-              <p>{name}</p>
-              <p>{number}</p>
-              <button
-                type="button"
-                onClick={() => {
-                  handleDeleteBTN(id);
-                }}
+      <ListBox>
+        <ul>
+          {contacts.map(({ name, id, number }) => {
+            return (
+              <Contact
+                key={id}
+                name={name}
+                id={id}
+                number={number}
+                handleDeleteBTN={handleDeleteBTN}
               >
-                Delete
-              </button>
-              <hr />
-            </Item>
-          );
-        })}
-      </ul>
+                {/* <div>
+                  <p>{name}</p>
+                  <p>{number}</p>
+                </div> */}
+                {/* <DeleteBtn
+                  type="button"
+                  onClick={() => {
+                    handleDeleteBTN(id);
+                  }}
+                >
+                  Delete
+                </DeleteBtn> */}
+              </Contact>
+            );
+          })}
+        </ul>
+      </ListBox>
     </>
   );
 }
