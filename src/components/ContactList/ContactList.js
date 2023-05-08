@@ -1,15 +1,25 @@
-export function ContactList({ contacts }) {
+import { Item } from './ContactList.styled';
+
+export function ContactList({ contacts, handleDeleteBTN }) {
   return (
     <>
       <h2>Contacts</h2>
       <ul>
         {contacts.map(({ name, id, number }) => {
           return (
-            <li key={id}>
+            <Item key={id}>
               <p>{name}</p>
               <p>{number}</p>
+              <button
+                type="button"
+                onClick={() => {
+                  handleDeleteBTN(id);
+                }}
+              >
+                Delete
+              </button>
               <hr />
-            </li>
+            </Item>
           );
         })}
       </ul>

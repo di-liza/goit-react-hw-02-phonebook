@@ -24,7 +24,7 @@ export class ContactForm extends Component {
 
     return isContactExists
       ? alert(`${name} is already in contacts`)
-      : (this.props.createContactsList(name, number), this.resetForm());
+      : (this.props.addContact(name, number), this.resetForm());
   };
 
   resetForm = () => {
